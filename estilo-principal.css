@@ -1,0 +1,361 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+  }
+  to {
+    opacity: 1; /* Termina completamente visible */
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+html{
+  scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+  background-color: #f5f5f5; /* Color de fondo de la página */
+  height: 2310px;
+  max-width: auto;
+  scroll-behavior: smooth;
+}
+body {
+  animation: fadeIn 1s ease-in-out; /* Aplica la animación al cargar la página */
+  margin: 0; /* Elimina márgenes predeterminados del cuerpo */
+  padding: 0; /* Elimina padding predeterminado del cuerpo */
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative; /* Necesario para que ::after se posicione relativo al enlace */
+  transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+}
+
+/* Estilo para el nav horizontal */
+nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 100px;
+  height: 80px;
+
+}
+
+.contactos{
+  position: relative;
+  left: 600px;
+
+  font-family: 'TT Norms', sans-serif; /* Cambia la fuente a TT Norms */
+  font-size: 20px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+}
+.ins{
+  padding-left: 10px;
+}
+
+nav a:not(:has(img)) {
+  color: #333;
+  font-family: 'TT Norms';
+  font-size: 20px;
+}
+
+nav a:not(:has(img)):hover {
+  font-size: 26px; /* Cambia el tamaño de fuente al pasar el cursor */
+}
+
+nav a:not(:has(img))::after {
+  content: ""; /* Crea un elemento vacío */
+  position: absolute; /* Posiciona la línea relativa al enlace */
+  left: 0;
+  bottom: -5px; /* Ajusta la posición de la línea debajo del texto */
+  width: 0; /* La línea comienza invisible */
+  height: 2px; /* Grosor de la línea */
+  background-color: #333;
+  transition: width 0.3s ease; /* Transición suave para la expansión de la línea */
+  z-index: -1;
+}
+
+nav a:not(:has(img)):hover::after {
+  width: 100%; /* La línea se expande completamente al pasar el cursor */
+}
+
+
+
+.inf_principal {
+    width: 400px;
+    font-family: 'TT Norms', sans-serif;
+    font-size: 10px;
+    color: #333;
+    margin-top: 200px; /* Espacio entre el nav y el texto */
+     position: relative; 
+    left: 190px;
+    text-align: center;
+
+}
+
+.texto_principal {
+    font-family: 'TT Norms', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px; /* Espacio entre el nav y el texto */
+    position: relative;
+    left: 30px;
+    text-align: center;
+    width: 600px;
+}
+
+.boton-productos {
+  background-color: #43b600; 
+  color: white; 
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; 
+  left: 120px;
+}
+
+.boton-productos:hover {
+  background-color: rgb(5, 133, 5);
+}
+
+.imagenes_inicio{
+  position: relative;
+  bottom: 770px;
+  left: 130px;
+}
+.imagen_principal {
+  position: absolute;
+  left: 900px;
+  top: 250px;
+  z-index: 2;
+
+}
+
+.imagen_secundaria {
+  position: absolute;
+  left: 850px;
+  top: 200px;
+  z-index: 1;
+  rotate: 46deg;
+  
+}
+
+.imagen_principal img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.imagen_secundaria img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagen_principal img:hover {
+  transform: scale(1.04); 
+}
+
+.imagen_secundaria img:hover{
+  transform: scale(1.04); 
+}
+.imagenes-graficas{
+  margin: 30px;
+}
+.aire{
+  height: 400px;
+}
+.eleccion-graficas{
+  background-color: #000000;
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+}
+
+.nav-graficas {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  padding: 10px 20px; 
+  gap: 90px; 
+  height: 80px;
+
+}
+.nav-graficas a {
+  color: #f5f5f5; 
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px;
+  transition: font-size 0.3s ease; 
+  text-decoration: none; 
+
+}
+.parte-inferior {
+  background-image:url(imagenes/orange-red-chevron-background.avif);
+  height: 1100px;
+  background-size: cover;
+}
+.tarjetas{
+  height: 900px;
+}
+/* .texto_secundario {
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  position: relative; 
+  right: -60px;
+  text-align: center;
+  height: 500px;
+} */
+h1{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  position: relative; 
+  right: 750px;
+  text-align: center;
+}
+.texto-final{
+
+  /* font-family: 'TT Norms', sans-serif; 
+  font-size:20px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  position: relative; 
+  left: 20px;
+  text-align: center;
+  width: 400px; */
+}
+
+
+.video-container video {
+  border-radius: 40px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+/* Contenedor principal del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Contenido del dropdown (oculto por defecto) */
+.dropdown-content {
+  display: none; /* Oculta el contenido inicialmente */
+  position: absolute;
+  background-color: #333; /* Fondo del menú desplegable */
+  min-width: 200px; /* Ancho mínimo */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+  z-index: 1;
+  padding: 10px 0;
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-content a {
+  color: #fff; /* Color del texto */
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block; /* Asegura que los enlaces ocupen toda la línea */
+  font-family: 'TT Norms', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #575757; 
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el contenido */
+}
+
+.tarjeta_nvidia{
+  background-color: #ffffff2a;
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 600px;
+  position: relative;
+  left: 110px;
+}
+.titulo_nvidia h2{
+  font-family: 'TT Norms', sans-serif;
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-top: 20px 10px; 
+  text-align: center;
+}
+.texto_nvidia{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  padding-left: 55px;
+  text-align: center;
+  width: 500px;
+}
+.seleccion {
+  background-color: #41ff07;
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 120px;
+  height: 30px;
+  color: #000000;
+  font-family: 'TT Norms', sans-serif;
+  font-size: 20px;
+}
+
+.tarjeta_amd{
+  background-color: #ffffff2a;
+  box-shadow: 4px 4px 100px rgb(0, 0, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 600px;
+  position: relative;
+  left: 1100px;
+  bottom: 860px;
+}
+
+.titulo_amd h2{
+  font-family: 'TT Norms', sans-serif;
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-top: 20px 10px; 
+  text-align: center;
+}
+
+.texto_amd{
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  padding-left: 55px;
+  text-align: center;
+  width: 500px;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 100px; 
+}
+
+footer p {
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 14px;
+  color: #777;
+}
+
