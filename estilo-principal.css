@@ -12,27 +12,27 @@
 }
 
 html{
-  scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+  scroll-behavior: smooth;
   background-color: #f5f5f5; /* Color de fondo de la página */
   height: 2310px;
   max-width: auto;
   scroll-behavior: smooth;
 }
 body {
-  animation: fadeIn 1s ease-in-out; /* Aplica la animación al cargar la página */
-  margin: 0; /* Elimina márgenes predeterminados del cuerpo */
-  padding: 0; /* Elimina padding predeterminado del cuerpo */
-  overflow-x: hidden; /* Evita desbordamiento horizontal */
+  animation: fadeIn 1s ease-in-out; 
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  position: relative; /* Necesario para que ::after se posicione relativo al enlace */
-  transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+  position: relative;
+  transition: font-size 0.3s ease;
 }
 
-/* Estilo para el nav horizontal */
+
 nav {
   display: flex;
   text-align: center;
@@ -47,9 +47,9 @@ nav {
   position: relative;
   left: 600px;
 
-  font-family: 'TT Norms', sans-serif; /* Cambia la fuente a TT Norms */
-  font-size: 20px; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
+  font-family: 'TT Norms', sans-serif; 
+  font-size: 20px; 
+  color: #333; 
 }
 .ins{
   padding-left: 10px;
@@ -62,23 +62,23 @@ nav a:not(:has(img)) {
 }
 
 nav a:not(:has(img)):hover {
-  font-size: 26px; /* Cambia el tamaño de fuente al pasar el cursor */
+  font-size: 26px; 
 }
 
 nav a:not(:has(img))::after {
-  content: ""; /* Crea un elemento vacío */
-  position: absolute; /* Posiciona la línea relativa al enlace */
+  content: ""; 
+  position: absolute; 
   left: 0;
-  bottom: -5px; /* Ajusta la posición de la línea debajo del texto */
-  width: 0; /* La línea comienza invisible */
-  height: 2px; /* Grosor de la línea */
+  bottom: -5px;
+  width: 0; 
+  height: 2px; 
   background-color: #333;
-  transition: width 0.3s ease; /* Transición suave para la expansión de la línea */
+  transition: width 0.3s ease; 
   z-index: -1;
 }
 
 nav a:not(:has(img)):hover::after {
-  width: 100%; /* La línea se expande completamente al pasar el cursor */
+  width: 100%; 
 }
 
 
@@ -88,7 +88,7 @@ nav a:not(:has(img)):hover::after {
     font-family: 'TT Norms', sans-serif;
     font-size: 10px;
     color: #333;
-    margin-top: 200px; /* Espacio entre el nav y el texto */
+    margin-top: 200px; 
      position: relative; 
     left: 190px;
     text-align: center;
@@ -99,7 +99,7 @@ nav a:not(:has(img)):hover::after {
     font-family: 'TT Norms', sans-serif;
     font-size: 20px;
     color: #333;
-    margin-top: 20px; /* Espacio entre el nav y el texto */
+    margin-top: 20px; 
     position: relative;
     left: 30px;
     text-align: center;
@@ -193,20 +193,13 @@ nav a:not(:has(img)):hover::after {
   background-image:url(imagenes/orange-red-chevron-background.avif);
   height: 1100px;
   background-size: cover;
+  box-shadow: #000000 0px 0px 1000px;
+  border-radius: 5px;
 }
 .tarjetas{
   height: 900px;
 }
-/* .texto_secundario {
-  font-family: 'TT Norms', sans-serif; 
-  font-size: 20px; 
-  color: #ffffff; 
-  margin-top: 20px; 
-  position: relative; 
-  right: -60px;
-  text-align: center;
-  height: 500px;
-} */
+
 h1{
   font-family: 'TT Norms', sans-serif; 
   font-size: 40px; 
@@ -216,48 +209,37 @@ h1{
   right: 750px;
   text-align: center;
 }
-.texto-final{
-
-  /* font-family: 'TT Norms', sans-serif; 
-  font-size:20px; 
-  color: #ffffff; 
-  margin-top: 20px; 
-  position: relative; 
-  left: 20px;
-  text-align: center;
-  width: 400px; */
-}
 
 
 .video-container video {
-  border-radius: 40px; /* Bordes redondeados */
-  overflow: hidden; /* Asegura que el contenido no se desborde */
+  border-radius: 40px; 
+  overflow: hidden;
 }
 
-/* Contenedor principal del dropdown */
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Contenido del dropdown (oculto por defecto) */
+
 .dropdown-content {
-  display: none; /* Oculta el contenido inicialmente */
+  display: none; 
   position: absolute;
-  background-color: #333; /* Fondo del menú desplegable */
-  min-width: 200px; /* Ancho mínimo */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #ffffff; 
+  min-width: 200px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   z-index: 1;
   padding: 10px 0;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px; 
 }
 
-/* Estilo de los enlaces dentro del dropdown */
+
 .dropdown-content a {
-  color: #fff; /* Color del texto */
+  color: #000000; 
   padding: 10px 20px;
   text-decoration: none;
-  display: block; /* Asegura que los enlaces ocupen toda la línea */
+  display: block;
   font-family: 'TT Norms', sans-serif;
   font-size: 16px;
   transition: background-color 0.3s ease;
@@ -265,16 +247,18 @@ h1{
 
 
 .dropdown-content a:hover {
-  background-color: #575757; 
+  background-color: #c4fab6; 
+  border-radius: 100px; 
 }
 
 
 .dropdown:hover .dropdown-content {
-  display: block; /* Muestra el contenido */
+  display: block; 
 }
 
 .tarjeta_nvidia{
   background-color: #ffffff2a;
+  backdrop-filter: blur(20px);
   box-shadow: 4px 4px 100px rgb(0, 0, 1);
   border-radius: 20px;
   padding: 20px;
@@ -316,6 +300,7 @@ h1{
 
 .tarjeta_amd{
   background-color: #ffffff2a;
+  backdrop-filter: blur(20px);
   box-shadow: 4px 4px 100px rgb(0, 0, 1);
   border-radius: 20px;
   padding: 20px;
@@ -347,8 +332,8 @@ h1{
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
   position: relative;
   top: 100px; 
 }
@@ -356,6 +341,6 @@ footer {
 footer p {
   font-family: 'TT Norms', sans-serif; 
   font-size: 14px;
-  color: #777;
+  color: #ffffff;
 }
 
