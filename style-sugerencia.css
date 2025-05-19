@@ -24,6 +24,66 @@ a {
     height: 80px;
   
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Necesario para que ::after se posicione relativo al enlace */
+    transition: font-size 0.3s ease; /* Transición suave para el tamaño de fuente */
+  }
+  
+  /* Estilo para el nav horizontal */
+  nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 100px;
+    height: 80px;
+  
+  }
+  
+  .contactos{
+    position: relative;
+    left: 600px;
+  
+    font-family: 'TT Norms', sans-serif; /* Cambia la fuente a TT Norms */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+  }
+  .ins{
+    padding-left: 10px;
+  }
+  
+  nav a:not(:has(img)) {
+    color: #333;
+    font-family: 'TT Norms';
+    font-size: 20px;
+  }
+  
+  nav a:not(:has(img)):hover {
+    font-size: 26px; /* Cambia el tamaño de fuente al pasar el cursor */
+  }
+  
+  nav a:not(:has(img))::after {
+    content: ""; /* Crea un elemento vacío */
+    position: absolute; /* Posiciona la línea relativa al enlace */
+    left: 0;
+    bottom: -5px; /* Ajusta la posición de la línea debajo del texto */
+    width: 0; /* La línea comienza invisible */
+    height: 2px; /* Grosor de la línea */
+    background-color: #333;
+    transition: width 0.3s ease; /* Transición suave para la expansión de la línea */
+    z-index: -1;
+  }
+  
+  nav a:not(:has(img)):hover::after {
+    width: 100%; /* La línea se expande completamente al pasar el cursor */
+  }
+  .nav-links {
+  display: flex;
+  gap: 100px;
+}
+  
   
   .contactos{
     position: relative;
@@ -134,4 +194,33 @@ footer {
 footer p {
     font-size: 14px;
     color: #777;
+}
+@media (max-width: 480px) {
+    nav{
+        padding-bottom: 200px;
+    }
+   .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  .contactos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  nav img{
+    width: 200px;
+  }
 }
