@@ -223,4 +223,9 @@ footer p {
   nav img{
     width: 200px;
   }
+    .contactos {
+    left: 0;
+    margin-top: 10px;
+    font-size: 16px;
+  }
 }
