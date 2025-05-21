@@ -505,6 +505,9 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    body, html {
+  overflow-x: hidden;
+}
    .nav-links {
     display: flex;
     flex-direction: row;
