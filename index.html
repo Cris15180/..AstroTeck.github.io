@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroTeck</title>
     <link rel="shortcut icon" href="imagenes/icon_astroteck.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilo-principal.css">
+    <link rel="stylesheet" href="style/estilo-principal.css">
     <link href="https://fonts.cdnfonts.com/css/tt-norms" rel="stylesheet">
 </head>
 <header>
     <nav>
             <a href="index.html">
-                <img  src="imagenes/astroteck_Editada.png" alt="marca" width="200px">
+                <img  src="../imagenes/astroteck_Editada.png" alt="marca" width="200px">
             </a>        
             <div class="nav-links">
                 <a href="contacos.html">Contacto</a>
@@ -36,7 +36,6 @@
             </a>
         </div>
     </nav>
-    <hr>
 </header>
 
 <body>
@@ -53,7 +52,7 @@
         <br>
         <br>
         <button class="boton-productos">
-            <a href="#productos">Graficas</a>
+            <a href="#tarjetas">Graficas</a>
         </button>
     </div>
     <div class="imagenes_inicio">
@@ -68,18 +67,18 @@
   <div class="aire">
 
   </div>
-    <div id="productos" class="eleccion-graficas">
+    <!-- <div id="productos" class="eleccion-graficas">
 
-        </div>
+        </div> -->
     </div>
     <div class="parte-inferior">
     <br>
     <br>
-    <div class="tarjetas">
+    <div class="tarjetas" id="tarjetas">
         <div class="tarjeta_nvidia">
             <div class="video-container">
                 <video id="video" width="600" muted>
-                    <source src="videos/wwd.mp3juice.blog - 2160p60 4K NVIDIA Logo Animation (THE WAY IT S MEANT TO BE PLAYED) (1080p60).mp4" type="video/mp4">
+                    <source src="/videos/wwd.mp3juice.blog - 2160p60 4K NVIDIA Logo Animation (THE WAY IT S MEANT TO BE PLAYED) (1080p60).mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
                 </video>
             </div>
@@ -94,17 +93,8 @@
                     NVIDIA es una empresa líder en tecnología gráfica, conocida por sus innovadoras tarjetas gráficas y soluciones de inteligencia artificial. Con su arquitectura avanzada y tecnologías como Ray Tracing y DLSS, NVIDIA ofrece un rendimiento excepcional en juegos y aplicaciones creativas. Sus productos son ideales para gamers, creadores de contenido y profesionales que buscan la mejor experiencia visual y rendimiento en sus equipos.
                 </p>
             </div>
-            <div class="articulos_nvidia">
-                <div class="dropdown">
-                        <section class="seleccion">Productos  <svg width="80" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="3"/>
-                      </svg></section>
-                        <div class="dropdown-content">
-                            <a href="NVIDIA-RTX 5090.html">NVIDIA-RTX 5090 </a>
-                            <a href="nvidia-rtx4090.html">NVIDIA-RTX 4090</a>
-                        </div>
-                </div>
-            </div>
+            <a href="productos-nvidia.html" class="redireccion" >Productos
+            </a>
         </div>
   <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
@@ -126,22 +116,8 @@
                     AMD es una empresa de semiconductores que se especializa en el diseño y fabricación de procesadores y tarjetas gráficas. Con su arquitectura RDNA y tecnologías innovadoras, AMD ofrece un rendimiento excepcional en juegos y aplicaciones creativas. Sus productos son ideales para gamers y profesionales que buscan un equilibrio entre rendimiento y eficiencia energética. AMD se ha consolidado como un competidor fuerte en el mercado de gráficos, ofreciendo soluciones atractivas para diversas necesidades.
                 </p>
             </div>
-            <div class="articulos_amd">
-                <div class="dropdown">
-                    <div class="nav-graficas">
-                        <div class="dropdown">
-                            <section class="seleccion">Productos  <svg width="80" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="3"/>
-                              </svg></section>
-                            <div class="dropdown-content">
-                                <a href="Radeon RX 7900 XTX.html">AMD-Radeon RX 7900 XTX</a>
-                                <a href=" AMD-Radeon RX 9950 XTX.html"> AMD-Radeon RX 9950 XTX</a>
-                            </div>
-                        </div>
-            
-                    </div>
-                </div>
-            </div>
+                 <a href="productos-amd.html" class="redireccion" >Productos
+            </a>
         </div>
     </div>
     <footer>
