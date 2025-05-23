@@ -58,6 +58,13 @@ a {
   display: flex;
   gap: 100px;
 }
+  header{
+  transition: 0.3s ease;
+  border-bottom: solid 1px #ccc;
+}
+header:hover{
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); 
+}
 
 .sugerencias, .sobre-nosotros, .contacto {
     text-align: center;
