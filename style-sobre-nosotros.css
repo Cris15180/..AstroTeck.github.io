@@ -97,6 +97,13 @@ a {
     padding-left: 10px;
   }
   
+  header{
+  transition: 0.3s ease;
+  border-bottom: solid 1px #ccc;
+}
+header:hover{
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2); 
+}
   nav a:not(:has(img)) {
     color: #333;
     font-family: 'TT Norms';
@@ -123,50 +130,129 @@ a {
     width: 100%; /* La línea se expande completamente al pasar el cursor */
   }
   
-  
-/* Estilo para la sección sobre nosotros */
-.sobre-nosotros {
-    text-align: center;
-    margin: 50px auto;
-    width: 80%;
-    max-width: 800px;
-}
-
-.sobre-nosotros h1, .sobre-nosotros h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.sobre-nosotros h1 {
-    font-size: 36px;
-}
-
-.sobre-nosotros h2 {
-    font-size: 28px;
-}
-
-.sobre-nosotros p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.sobre-nosotros ul {
+  li {
     list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
+  }
+ /* sobre npsotros */
 
-.sobre-nosotros ul li {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: left;
-}
+  .sobre-nosotros {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .quienes-somos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 900px;
+    transition: 0.3s ease;
+  }
+  .quienes-somos img {
+    width: 400px;
+    padding-right: 50px;
+  }
 
 
-footer {
+   /* sepracion para mas orden*/
+  /* esa clase texto es para que el h1 este arriba de p*/
+  .texto {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right:  50px; 
+    text-align: center;
+  }
+
+  .por-que-lo-hacemos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+   transition: 0.3s ease;
+  }
+
+
+  /* sepracion para mas orden*/
+
+  .que-hacemos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+   transition: 0.3s ease;
+  }
+
+
+  /* sepracion para mas orden*/
+  .nuestos-valores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+   transition: 0.3s ease;
+  }
+  .nuestros-principios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 700px;
+    transition: 0.3s ease;
+  }
+
+
+  .quienes-somos:hover {
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    width: 1000px;
+    border-radius: 20px;
+  }
+  .por-que-lo-hacemos:hover {
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    width: 800px;
+    border-radius: 20px;
+  }
+  .que-hacemos:hover {
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    width: 800px;
+    border-radius: 20px;
+  }
+   .nuestos-valores:hover {
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    width: 800px;
+    border-radius: 20px;
+   }
+   .nuestros-principios:hover {
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    width: 700px;
+    border-radius: 20px;
+   }
+
+   /* separacion otra ve*/
+
+
+  .por-que-lo-hacemos img {
+    border-radius: 20px;
+  }
+  .que-hacemos img {
+    border-radius: 20px;
+  }
+   .nuestos-valores img {
+    border-radius: 20px;
+   }
+   .nuestros-principios img{
+    border-radius: 20px;
+   }
+
+  footer {
     text-align: center;
     padding: 20px;
     background-color: #fff;
@@ -178,6 +264,8 @@ footer p {
     font-size: 14px;
     color: #777;
 }
+
+
 @media (max-width: 480px) {
     nav{
         padding-bottom: 200px;
@@ -209,4 +297,48 @@ footer p {
   .contactos {
     display: none !important;
   }
+  .quienes-somos,
+  .por-que-lo-hacemos,
+  .que-hacemos,
+  .nuestos-valores,
+  .nuestros-principios {
+    width: 98%;
+    max-width: 98vw;
+    padding: 10px 2vw;
+  }
+  .quienes-somos img,
+  .por-que-lo-hacemos img,
+  .que-hacemos img,
+  .nuestos-valores img,
+  .nuestros-principios img {
+    max-width: 220px;
+  }
 }
+
+/* En móvil, todo en columna y más compacto */
+@media (max-width: 600px) {
+  .quienes-somos,
+  .por-que-lo-hacemos,
+  .que-hacemos,
+  .nuestos-valores,
+  .nuestros-principios {
+    width: 100%;
+    max-width: 100vw;
+    padding: 8px 0;
+    gap: 10px;
+  }
+  .quienes-somos img,
+  .por-que-lo-hacemos img,
+  .que-hacemos img,
+  .nuestos-valores img,
+  .nuestros-principios img {
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+  .texto {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 15px;
+  }
+}
+
