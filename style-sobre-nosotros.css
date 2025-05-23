@@ -138,9 +138,10 @@ header:hover{
   .sobre-nosotros {
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: 60px;
+    justify-content: space-evenly;
   }
 
   .quienes-somos {
