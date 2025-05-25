@@ -166,8 +166,11 @@
                             <img src="${producto.imagen}" alt="${producto.nombre}">
                             <span>${producto.nombre}</span>
                         </div>
+                        
+                        <div class="carrito-b-p">
                         <span class="carrito-precio">₡${producto.precio.toLocaleString()}</span>
                         <button class="carrito-eliminar" onclick="eliminarItem(${idx})">Eliminar</button>
+                        </div>
                     </li>
                 `;
             });
