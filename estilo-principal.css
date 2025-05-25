@@ -211,7 +211,7 @@ nav a:not(:has(img)):hover::after {
 
 }
 .parte-inferior {
-  background-image:url(../imagenes/orange-red-chevron-background.avif);
+  background-image:url(imagenes/orange-red-chevron-background.avif);
   height: 1100px;
   background-size: cover;
   box-shadow: #000000 0px 0px 1000px;
