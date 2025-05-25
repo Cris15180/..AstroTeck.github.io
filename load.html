@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Procesando compra...</title>
+  <link rel="stylesheet" href="../style/load-style.css">
+</head>
+<body>
+
+  <!-- Animación de carga -->
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>Procesando tu compra...</p>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <div id="success" class="success hidden">
+    <div class="checkmark">✔️</div>
+    <h1>¡Compra realizada con éxito!</h1>
+    <p>Gracias por tu compra. Te enviamos un correo con los detalles.</p>
+    <a class="button" href="carrito.html">Volver al inicio</a>
+  </div>
+
+  <script>
+    // Espera 3 segundos y muestra el mensaje de éxito
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+      document.getElementById('success').classList.remove('hidden');
+    }, 3000);
+  </script>
+
+</body>
+</html>
