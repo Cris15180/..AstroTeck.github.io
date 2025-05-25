@@ -193,27 +193,6 @@
         document.addEventListener("DOMContentLoaded", mostrarCarrito);
 
 
-
-
-            function comprar() {
-        event.preventDefault(); // Evita que se recargue la página
-
-        // Limpiar la lista del carrito visualmente
-        const listaCarrito = document.getElementById("carrito-lista");
-        listaCarrito.innerHTML = "";
-
-        // Reiniciar el total a ₡0
-        document.getElementById("carrito-total").textContent = "Total: ₡0";
-
-        // También podés limpiar el almacenamiento local si estás usando localStorage
-        localStorage.removeItem("carrito"); // Solo si usás localStorage para guardar los ítems
-
-        alert("¡Gracias por tu compra!");
-    }
-
-    function mostrarPago() {
-        document.getElementById("datos-pago").style.display = "block";
-    }
 </script>
     
 </body>
