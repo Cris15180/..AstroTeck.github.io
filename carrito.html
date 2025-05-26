@@ -65,35 +65,59 @@
         <!--ingreos de datos pa pagar-->
 
         <div class="datos-pago" id="datos-pago" style="display:none;">
-            <h2>Datos de Pago</h2>
-            <form id="formulario-pago">
-                <div class="nombre">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+            <h2 class="ponte-atraas">Datos de Pago</h2>
+            <form class="formulario-pago">
+                <div class="parte-arriba">
+                    <div class="img-tarjeta">
+                        <img src="imagenes/tarjeta-de-credito.png" alt="">
+                    </div>
+                    <div>
+                        <input type="text" id="card-name" name="card-name" placeholder="Juan Pérez " required>
+                    </div>
+                    <div class="input-icon-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+                    </svg>
+                        <input type="number" id="numer" name="number" placeholder="123 345 566 89" required pattern="\d{2}/\d{2}">
+                    </div>
                 </div>
-                <div class="numero">
-                    <label for="Number">Numero de tarjeta</label>
-                    <input type="number" id="Number" name="Number" required>
+
+                <div class="datos-tarjeta">
+                    <div class="input-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-back-fill" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1z"/>
+                        </svg>
+                        <input class="numeros" type="text" id="cvv" name="cvv" placeholder="123" required pattern="\d{3,4}">
+                    </div>
+
+                    <div>
+                        <input class="numeros" type="number" id="mes" name="mes" placeholder="12" required min="1" max="12">
+                    </div>
+                    <div>
+                        <input class="numeros" type="number" name="año" id="año" placeholder="2029" required min="2025"> 
+                    </div>
+                    
                 </div>
-                <div class="numero">
-                    <label for="fecha-expiracion">Fecha de Expiración:</label>
-                    <input type="date" id="fecha-expiracion" name="fecha-expiracion" required>
-                </div>
-                <div class="numero">
-                    <label for="cvv">CVV:</label>   
-                    <input type="number" id="cvv" name="cvv" required>
-                </div>
-                <div class="correo">
-                    <label for="direccion">Correo Electrónico:</label>
-                    <input type="mail" id="direccion" name="direccion" required>
-                </div>
-                <div class="numero">
-                    <label for="Numero">Numero De Telefono:</label>   
-                    <input type="number" id="numero" name="numero" required>
-                </div>
-                <a href="load.html" type="submit" class="boton-comprar" onclick="comprar() ">Comprar</a>
+                <a style="width: 100px;" href="load.html" type="submit" class="boton-comprar" onclick="comprar() ">Comprar</a>
 
             </form>
+            <div class="pago-paypal">
+                
+                <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi-bi-paypal" viewBox="0 0 16 16">
+                    <path d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.35.35 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91q.57-.403.993-1.005a4.94 4.94 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.7 2.7 0 0 0-.76-.59l-.094-.061ZM6.543 8.82a.7.7 0 0 1 .321-.079H8.3c2.82 0 5.027-1.144 5.672-4.456l.003-.016q.326.186.548.438c.546.623.679 1.535.45 2.71-.272 1.397-.866 2.307-1.663 2.874-.802.57-1.842.815-3.043.815h-.38a.87.87 0 0 0-.863.734l-.03.164-.48 3.043-.024.13-.001.004a.35.35 0 0 1-.348.296H5.595a.106.106 0 0 1-.105-.123l.208-1.32z"/>
+                </svg>
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="mail" name="business" id="ingrese" placeholder="tu-correo@paypal.com">
+                    <input type="text" name="item_name" id="ingrese" placeholder="Nombre del producto">
+                    <input type="number" name="amount" value="100.00">  
+                    <select name="moneda" id="moneda">
+                        <option value="CRC">CRC</option>
+                        <option value="USD">USD</option>
+                    </select>
+                    <input class="button alternative" type="submit" value="Pagar con PayPal ">
+                </form>
+        </div>
             
 
     </main>
