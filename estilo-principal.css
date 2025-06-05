@@ -584,6 +584,7 @@ footer p {
   .boton-productos {
     font-size: 12px;
     padding: 8px 12px;
+    width: 200px;
   }
   .seleccion {
     font-size: 12px;
